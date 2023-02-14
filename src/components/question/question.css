@@ -1,0 +1,30 @@
+.question h2 {
+    margin-bottom: 12px;
+}
+
+.question .answers {
+    list-style: none;
+}
+
+.question .answer-box {
+    background-color: #3b4a57;
+}
+
+.question .answer-box {
+    display: flex;
+    padding-left: 12px;
+}
+
+.question .answer-box:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.question .answer-box input {
+}
+
+.question .answer-box label {
+    display: block;
+    padding: 12px;
+    height: 100%;
+    width: 100%;
+}

@@ -1,39 +1,52 @@
 .App {
-  text-align: center;
+    width: 70%;
+    margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page {
+    padding: 24px;
+    background: #263038;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.page > *:not(:last-child) {
+    margin-bottom: 12px;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.button {
+    text-decoration: none;
+    padding: 6px 12px;
+    background-color: #ff3d00;
+    color: #ffffff;
+    font-size: 18px;
+    position: relative;
+    border: none;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.progress {
+    width: 100%;
+    position: relative;
+    border: 1px solid #ff3d00;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.progress .progress-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button:disabled::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: lightslategray;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
 }
